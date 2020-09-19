@@ -7,7 +7,7 @@ class DelayedButton extends React.Component {
         console.log(this.props)
         setTimeout(() =>{
             this.props.delay
-            this.props.onDelayedClick(e)
+            this.props.onDelayedClick(e) //callback prop
         })
         // this.props.DelayedButton(timeOut)
     }
@@ -21,4 +21,9 @@ class DelayedButton extends React.Component {
 
 export default DelayedButton
 
-// Code DelayedButton Component Here
+// recap:
+// this component needs a button that delays a set time
+// we know that we have access to two props : onDelayedClick and delay
+// we want to persist the event so that it does not refresh and console.log(null).
+// a way we can delay time is by using setTimOut() setting both these props inside of it 
+// see how to implement setTimeOut() in docs
